@@ -1,0 +1,57 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> Name: <small></small> </label>
+                        <input required type="text"  name="name" id="name"
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..." [(ngModel)]="user.name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstname"><span class="req">* </span> Auther name: </label>
+                        <input class="form-control" type="text"  name="Auther name" id="txt" required
+                            placeholder="Enter the auther name" [(ngModel)]="user.authername"/>
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname"><span class="req">* </span> Date : </label>
+                        <input class="form-control" type="text"  name="address" id="txt"
+                            placeholder="Enter date" required [(ngModel)]="user.date"/>
+                        <div id="errLast"></div>
+                    </div>
+
+                  <div class="form-group">
+                    <label for="copy"><span class="req">* </span> Number of copy : </label>
+                    <input class="form-control" type="text"  name="address" id="txt"
+                           placeholder="Enter number of copies" required [(ngModel)]="user.copy"/>
+                    <div id="errLast"></div>
+                  </div>
+
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+<br>
+    <div>
+    <button class="btn" style="color:blue; background-color: blanchedalmond;" (click)="search()">Search Book</button>
+</div>
+</div>
